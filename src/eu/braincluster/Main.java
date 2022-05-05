@@ -1,9 +1,11 @@
 package eu.braincluster;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
-public class Main {
+public class Main
+{
 
     private static void printPersons(List<Person> persons)
     {
@@ -68,12 +70,26 @@ public class Main {
 
     private static void example4()
     {
-        System.out.println("ArrayList Example 3");
+        System.out.println("ArrayList Example 4");
 
         var persons =
                 List.of(
                         new Person("Mathias", "Jacob"),
                         new Person("Pat", "Garrett")
+                );
+
+        printPersons(persons);
+    }
+
+    private static void example5()
+    {
+        System.out.println("ArrayList Example 5");
+
+        var persons =
+                Arrays.asList(
+                        new Person("Travis", "Daye"),
+                        new Person("Nigel", "Levins"),
+                        new Person("Tse", "Sakamoto")
                 );
 
         printPersons(persons);
@@ -93,6 +109,9 @@ public class Main {
         System.out.println();
 
         example4();
+        System.out.println();
+
+        example5();
         System.out.println();
     }
 }
