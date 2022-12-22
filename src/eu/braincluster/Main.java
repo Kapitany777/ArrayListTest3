@@ -119,6 +119,29 @@ public class Main
         printPersons(persons);
     }
 
+    private static void example7()
+    {
+        System.out.println("ArrayList Example 7");
+
+        var persons = new ArrayList<Person>()
+        {{
+            add(new Person("Travis", "Daye"));
+            add(new Person("Nigel", "Levins"));
+            add(new Person("Tse", "Sakamoto"));
+        }};
+
+        printPersons(persons);
+
+        try
+        {
+            persons.remove(10);
+        }
+        catch (IndexOutOfBoundsException ex)
+        {
+            System.out.println("The index is out of bounds");
+        }
+    }
+
     public static void main(String[] args)
     {
         System.out.println("ArrayList test program");
@@ -139,6 +162,9 @@ public class Main
         System.out.println();
 
         example6();
+        System.out.println();
+
+        example7();
         System.out.println();
     }
 }
