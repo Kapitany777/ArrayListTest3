@@ -15,6 +15,8 @@ public class Main
         {
             System.out.println(person);
         }
+
+        System.out.println("The list has " + persons.size() + " elements.");
     }
 
     private static void example1()
@@ -78,6 +80,7 @@ public class Main
                         new Person("Pat", "Garrett")
                 );
 
+        System.out.println("The type of the list is " + persons.getClass().getName());
         printPersons(persons);
     }
 
@@ -91,6 +94,27 @@ public class Main
                         new Person("Nigel", "Levins"),
                         new Person("Tse", "Sakamoto")
                 );
+
+        System.out.println("The type of the list is " + persons.getClass().getName());
+        printPersons(persons);
+    }
+
+    private static void example6()
+    {
+        System.out.println("ArrayList Example 6");
+
+        var persons = new ArrayList<Person>()
+        {{
+            add(new Person("Travis", "Daye"));
+            add(new Person("Nigel", "Levins"));
+            add(new Person("Tse", "Sakamoto"));
+        }};
+
+        printPersons(persons);
+
+        persons.remove(1);
+
+        System.out.println("After removing Nigel Levins:");
 
         printPersons(persons);
     }
@@ -112,6 +136,9 @@ public class Main
         System.out.println();
 
         example5();
+        System.out.println();
+
+        example6();
         System.out.println();
     }
 }
